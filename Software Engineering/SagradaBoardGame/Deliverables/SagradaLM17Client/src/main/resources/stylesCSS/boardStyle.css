@@ -1,0 +1,11 @@
+
+
+.currentBoard{
+	-fx-border-color: black;
+	-fx-border-radius: 12;
+}
+
+.notCurrentBoard{
+	-fx-border-color: white;
+	-fx-border-radius: 12;
+}

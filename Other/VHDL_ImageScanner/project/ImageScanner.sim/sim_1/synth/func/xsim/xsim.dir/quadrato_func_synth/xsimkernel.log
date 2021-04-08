@@ -1,0 +1,7 @@
+Running: xsim.dir/quadrato_func_synth/xsimk.exe -simmode gui -wdb quadrato_func_synth.wdb -simrunnum 0 -socket 1912
+Design successfully loaded
+Design Loading Memory Usage: 10164 KB (Peak: 10164 KB)
+Design Loading CPU Usage: 15 ms
+Simulation completed
+Simulation Memory Usage: 16304 KB (Peak: 16304 KB)
+Simulation CPU Usage: 233 ms

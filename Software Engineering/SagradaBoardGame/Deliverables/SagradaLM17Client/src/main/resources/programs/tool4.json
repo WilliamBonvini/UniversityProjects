@@ -1,0 +1,28 @@
+{"microOperationList":[
+  {"type":"checkpoint", "parameters":[]},
+  {"type":"subfavours",   "parameters":["4"]},
+  {"type":"program",  "parameters":["src/main/resources/programs/reset_filters"]},
+  {"type":"reset", "parameters":["input"]},
+
+  {"type":"filter", "parameters":["fullcell","yes"]},
+  {"type":"input", 	"parameters":["board"]},
+  {"type":"filter", "parameters":["fullcell","no"]},
+  {"type":"move", 	"parameters":["1","board","user","current","append"]},
+
+  {"type":"filter", "parameters":["emptycell","boardcolor","boardnumber","dienumber","diecolor","neardie","yes"]},
+  {"type":"input", 	"parameters":["board"]},
+  {"type":"filter", "parameters":["emptycell","boardcolor","boardnumber","dienumber","diecolor","neardie","no"]},
+  {"type":"move", 	"parameters":["all","current","random","board","user"]},
+
+
+  {"type":"filter", "parameters":["fullcell","yes"]},
+  {"type":"input", 	"parameters":["board"]},
+  {"type":"filter", "parameters":["fullcell","no"]},
+  {"type":"move", 	"parameters":["1","board","user","current","append"]},
+
+  {"type":"filter", "parameters":["emptycell","boardcolor","boardnumber","dienumber","diecolor","neardie","yes"]},
+  {"type":"input", 	"parameters":["board"]},
+  {"type":"filter", "parameters":["emptycell","boardcolor","boardnumber","dienumber","diecolor","neardie","no"]},
+  {"type":"move", 	"parameters":["all","current","random","board","user"]},
+  {"type":"checkpoint", "parameters":[]}
+]}

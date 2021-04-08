@@ -1,0 +1,117 @@
+\input{commandsFile}
+
+\begin{document}
+
+%TITLE PAGE
+
+\begin{titlepage}
+
+
+%LOGO
+
+{\begin{table}[t!]
+\centering
+\begin{tabu} to \textwidth { X[1.3,r,p] X[1.7,l,p] }
+\textcolor{Blue}
+{\textbf{\small{TrackMe project L. Barilani, W. Bonvini, L. Carnaghi}}} & \includegraphics[scale=0.5]{Images/PolimiLogo}
+\end{tabu}
+\end{table}}~\\ [7cm]
+
+%TITLE 
+
+\begin{flushleft}
+
+%Replace the text string with your title
+{\textcolor{Blue}{\textbf{\Huge{Design Document}}}} \\ [1cm]
+
+\end{flushleft}
+	
+\end{titlepage}
+
+%Define deliverable specific info
+%Replace cell contents where needed
+\begin{table}[h!]
+\begin{tabu} to \textwidth { X[0.3,r,p] X[0.7,l,p] }
+\hline
+
+\textbf{Deliverable:} & DD\\
+\textbf{Title:} & Design Document \\
+\textbf{Authors:} & Leonardo Barilani, William Bonvini, Lorenzo Carnaghi \\
+\textbf{Version:} & 1.0 \\ 
+\textbf{Date:} & 8-November-2018 \\
+\textbf{Download page:} & https://github.com/Lockyard/BarilaniBonviniCarnaghi \\
+\textbf{Copyright:} & Copyright © 2018, Leonardo Barilani, William Bonvini, Lorenzo Carnaghi – All rights reserved \\
+\hline
+\end{tabu}
+\end{table}
+\color{secred}
+
+
+
+
+\setcounter{page}{2}
+
+
+
+%------------------------------------------------------------------------------------------------------------------------------------------------
+\newpage
+\color{secred}
+\addcontentsline{toc}{section}{Table of Contents}
+\tableofcontents
+
+\color{black}
+
+%------------------------------------------------------------------------------------------------------------------------------------------------
+\clearpage
+{\color{secblue}{\section{Introduction}}}
+\label{sect:introduction}
+\input{Files/1_introduction}
+
+%------------------------------------------------------------------------------------------------------------------------------------------------
+\clearpage
+{\color{secblue}{\section{Architectural Design}}}
+\label{sect:archides}
+\input{Files/2_1_overview}
+\input{Files/2_2_component_view}
+\input{Files/2_3_deployment_view}
+\input{Files/2_4_runtime_view}
+\input{Files/2_5_component_interfaces}
+\input{Files/2_6_patterns_and_styles}
+\input{Files/2_7_other_design_decisions}
+ 
+%------------------------------------------------------------------------------------------------------------------------------------------------
+\clearpage
+{\color{secblue}{\section{User Interface design}}}
+\label{sect:ui_design}
+\input{Files/3_user_interface_design}
+
+%------------------------------------------------------------------------------------------------------------------------------------------------
+\clearpage
+{\color{secblue}{\section{Requirements traceability}}}
+\label{sect:req_traceability}
+\input{Files/4_requirements_traceability}
+
+%------------------------------------------------------------------------------------------------------------------------------------------------
+\clearpage
+{\color{secblue}{\section{Implementation, integration and test plan}}}
+\label{sect:plans}
+\input{Files/5_implementation_integration_test_plan}
+
+%------------------------------------------------------------------------------------------------------------------------------------------------
+\clearpage
+{\color{secblue}{\section{Effort Spent}}}
+\label{sect:effort}
+\input{Files/6_effort}
+
+
+%------------------------------------------------------------------------------------------------------------------------------------------------
+\clearpage
+\addcontentsline{toc}{section}{References}
+\bibliographystyle{plain}
+\bibliography{main}
+%------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+\end{document}

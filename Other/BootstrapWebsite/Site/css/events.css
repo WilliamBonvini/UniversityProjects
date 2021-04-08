@@ -1,0 +1,112 @@
+/*
+Needed to prevent the jumbotron to get hidden by the navbar
+*/
+body {
+  padding-top: 54px;
+}
+
+.col-lg-4{
+    text-align: center;
+}
+
+.col-sm-6 mb-4{
+    text-align: center;
+}
+
+
+
+/*
+Sets the color of the cards components and of the jumbotron.
+*/
+.card-body{
+    background-color: #a1c4e9;
+}
+
+.card-footer{
+    background-color: #a1c4e9;
+}
+
+.jumbotron{
+    background-color: #a1c4e9;
+}
+
+
+/* 
+Makes default navbar links display block at choosen breakpoint and adjust styles to fit the screen.
+*/
+
+@media (max-width: 62em) {
+    
+     /* fixes the padding of the landmarks when the navbar becomes a dropdown menu*/
+	.navbar-nav {
+		padding-top: .425rem;
+		padding-left: 0.75rem;
+	}
+	
+    /*
+    By default, Bootstrap collapses (vertically stacks) the navbar at 768 pixels.
+    We want it to collapse at 992px(62em)
+    */
+	.navbar-brand,
+	.navbar-nav .nav-item {
+		display: block;
+	}
+
+}
+
+
+
+/* Smartphones (portrait and landscape) ----------- */ 
+@media only screen and (min-width : 100px) and (max-width : 480px) { 
+    #description{
+        font-size: x-small;
+        text-align: center;
+    }
+    .gtbutton{
+        margin-bottom: 1em;
+    }
+} 
+
+/* Between Smartphones and IPads */
+@media only screen and (min-width : 481px) and (max-width : 767px) { 
+    #description{
+        font-size: small;
+        text-align: center;
+    }
+} 
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-width : 768px) and (max-width : 1024px) { 
+    #description{
+        font-size: large;
+        text-align: center;
+    }
+} 
+
+
+/* Desktops and laptops ----------- */ 
+@media only screen and (min-width : 1025px) { 
+    #description{
+        font-size: x-large;
+    }
+} 
+
+
+/* Large screens ----------- */ 
+@media only screen and (min-width : 1824px) { 
+    #description{
+        font-size: xx-large;
+    }
+
+} 
+
+
+/*
+When the screen width increases to 992px, the padding from the top increases a little
+*/
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+}
+

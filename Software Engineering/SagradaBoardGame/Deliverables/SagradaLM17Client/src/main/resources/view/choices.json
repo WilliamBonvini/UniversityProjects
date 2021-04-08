@@ -1,0 +1,46 @@
+[
+  {
+    "id":1,
+    "question":"Scegli di quanto aumentare il valore del dado. (non puoi decrementare un 1 o incrementare un 6):",
+    "options":[
+      {
+        "t":1,
+        "e":"-1"
+      },
+      {
+        "t":2,
+        "e":"+1"
+      }
+    ]
+  },
+  {
+    "id":11,
+    "question":"Scegli il valore del dado:",
+    "options":[
+      {
+        "t":1,
+        "e":1
+      },
+      {
+        "t":2,
+        "e":2
+      },
+      {
+        "t":3,
+        "e":3
+      },
+      {
+        "t":4,
+        "e":4
+      },
+      {
+        "t":5,
+        "e":5
+      },
+      {
+        "t":6,
+        "e":6
+      }
+    ]
+  }
+]

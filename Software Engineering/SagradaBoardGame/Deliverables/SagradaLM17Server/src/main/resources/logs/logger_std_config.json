@@ -1,0 +1,6 @@
+{
+  "name":"",
+  "logFile":"src/main/resources/logs/default.log",
+  "filterLevel":0,
+  "colorMode":false
+}

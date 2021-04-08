@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Thu May 31 10:25:23 2018
+# Process ID: 26784
+# Current directory: D:/polimi/ImageScanner/ImageScanner.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source D:/polimi/ImageScanner/ImageScanner.sim/sim_1/behav/xsim/xsim.dir/quadrato_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: D:/polimi/ImageScanner/ImageScanner.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: D:/polimi/ImageScanner/ImageScanner.sim/sim_1/behav/xsim\webtalk.jou
+#-----------------------------------------------------------
+source D:/polimi/ImageScanner/ImageScanner.sim/sim_1/behav/xsim/xsim.dir/quadrato_behav/webtalk/xsim_webtalk.tcl -notrace

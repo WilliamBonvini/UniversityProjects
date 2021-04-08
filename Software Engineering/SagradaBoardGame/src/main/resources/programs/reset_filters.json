@@ -1,0 +1,21 @@
+{"microOperationList":[
+  {"type":"filter", 	"parameters":[
+    "logger",
+    "player",
+    "pass",
+    "component",
+    "toolsturn",
+    "frame", "yes"]},
+  {"type":"filter", 	"parameters":[
+    "roundtrackfullcell",
+    "modify",
+    "neardie",
+    "fardie",
+    "emptycell",
+    "fullcell",
+    "boardnumber",
+    "boardcolor",
+    "dienumber",
+    "diecolor",
+    "selectedcolor", "no"]}
+]}

@@ -1,0 +1,135 @@
+/*
+Needed to prevent the jumbotron from getting hidden by the navbar
+*/
+body {
+  padding-top: 54px;
+}
+
+
+.col-lg-4{
+    text-align: center;
+}
+
+
+/*
+Sets the color of the cards components and of the jumbotron.
+*/
+.card-body{
+    background-color: #a1c4e9;
+}
+
+.jumbotron{
+    background-color: #a1c4e9;
+}
+
+
+/* 
+Makes default navbar links display block at choosen breakpoint and adjust styles to fit the screen.
+*/
+@media (max-width: 62em) {
+	.navbar-nav {
+		padding-top: .425rem;
+		padding-left: 0.75rem;
+	}
+
+	/*
+    By default, Bootstrap collapses (vertically stacks) the navbar at 768 pixels.
+    We want it to collapse at 992px(62em)
+    */
+	.navbar-brand,
+	.navbar-nav .nav-item {
+		display: block;
+	}
+}
+
+
+/* 
+Carousel control arrows dimensions and style
+*/
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    height: 50px;
+    width: 50px;
+    background-color: #a1c4e9;
+    background-size: 100%, 100%;
+    border-radius: 50%;
+    
+}
+
+
+
+
+/* Smartphones (portrait and landscape) ----------- */ 
+@media only screen and (min-width : 100px) and (max-width : 480px) { 
+    #homepagetitle{
+        font-size: 2em;
+    }
+    
+} 
+
+/* Between Smartphones and IPads */
+@media only screen and (min-width : 481px) and (max-width : 767px) { 
+    #homepagetitle{
+        font-size: 3em;
+    }
+} 
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-width : 768px) and (max-width : 1024px) { 
+    #homepagetitle{
+        font-size: 4em;
+    }
+} 
+
+
+/* Desktops and laptops ----------- */ 
+@media only screen and (min-width : 1025px) { 
+    #homepagetitle{
+        font-size: 5em;
+    }
+}
+
+/* Large screens ----------- */ 
+@media only screen and (min-width : 1824px) { 
+    #homepagetitle{
+        font-size: 7em;
+    }
+} 
+
+
+/* homepage carousel controls position: if the screen is wide enough, the arrows are displayed aside the homepage pictures. */
+@media only screen and (min-width : 1224px) { 
+    
+    .carousel-control-prev{
+        width: 3em;
+    }
+    .carousel-control-next{
+        width: 3em;
+    }
+} 
+
+
+
+/* In the operatingin pages, it decreases the size of the title when the screen gets too small*/
+@media (max-width : 500px) { 
+    #operatingintitle{
+        font-size: 2em;
+    }
+} 
+
+
+/* In the Who We Are page, the title should decrease its size when the screen size gets too small */
+@media (max-width :450px){
+    #whowearetitle{
+        font-size: 3em;
+    }
+}
+
+
+/*
+When the screen width increases to 992px, the padding from the top increases a little
+*/
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+}

@@ -1,0 +1,71 @@
+{\color{secblue}\subsection{Purpose}}
+This document contains a technical review of the RASD of the projects Data4Help, AutomatedSOS and Track4Run.
+In details, we want to highlight the importance of these aspects:
+\begin{itemize}
+\item High and low level architecture;
+\item Components and their connections;
+\item Interaction between users and apps;
+\item Design patterns;
+\item Implementation, Integration and Testing plans.
+\end{itemize}
+{\color{secblue}\subsection{Scope}}
+Data4Help is a service mainly thought for big companies who want to make better targeted choices for their business. Since the service acquires the health status of the users, most of the companies interested in the service are supposely going to be related to lifestyle, fitness, and generally the sport world.
+The position of the users is instead a very useful information for third parties related to the transportation system and tourism.
+Health status and position combined offer a good overview of the health situation of a population of a specific area selected by the third party. Such data can be used for pools and statistical purposes, so being attractive to health related realities: pharmacheutical industry, health organizations (state entities and non state ones).
+The final product will consist of 3 main softwares:
+\begin{itemize}
+\item The server-side software;
+\item The mobile application for standard-users;
+\item The desktop application for third-parties users.
+\end{itemize}
+There are quite a few shared phenomena that occur in the projects:
+\begin{itemize}
+\item When a third party request a query in Data4Help;
+\item When one of the three application gather information;
+\item When AutomatedSOS call an ambulance in case of an emergency;
+\item When a run is created in Track4Run.
+\end{itemize}
+
+{\color{secblue}\subsection{Definitions, Acronyms, Abbreviations}}
+{\color{secblue}\subsubsection{Definitions}}
+\begin{itemize}
+\item User: a user is a person who uses Data4Help's services by having installed the application on their smartwatch and registered to the Data4Help platform.
+\item Third-party: any organization/company/authority who has access to query the database which stores all users' data.
+\item Query: A filtered search asked to the Data4Help's DB.
+\item Race/Run: an event organized through Track4Run service, in a specific location.
+\end{itemize}
+{\color{secblue}\subsubsection{Abbreviations}}
+\begin{itemize}
+\item \b{[Gx]:} x-th Goal
+\item \b{[Dx]:} x-th Domain assumption
+\item \b{[Rx]:} x-th Requirement
+\item \b{[FRx]:} x-th Functional Requirement
+\end{itemize}
+
+{\color{secblue}\subsubsection{Acronyms}}
+\begin{itemize}
+\item \b{TP:} Third Party (TPs for plural)
+\item \b{SSN:} Social Security Number
+\item \b{CF:} Codice Fiscale
+\item \b{DB:} Database
+\item \b{D4H:} Data4Help
+\item \b{D4HU:} Data4Help User view
+\item \b{D4HTP:} Data4Help Third Party view 
+\item \b{ASOS:} Automated SOS
+\item \b{T4R:} Track4Run
+\item \b{ADQR:} Anonymous Data Query Request
+\item \b{IDR:} Individual Data Request
+\end{itemize}
+
+{\color{secblue}\subsection{Revision history}}
+For version 2 of DD:
+\begin{itemize}
+\item Removed references to chat system from UX diagrams and mockups
+\end{itemize}
+
+{\color{secblue}\subsection{Document Structure}}
+\paragraph{Architectural design} explains how the whole structure of the projects comes together, both in the client-server networking aspect and in the interfaces that are used in the software shared between all the devices involved in the services.
+\paragraph{User interfaces design} gives a first look on how the user interface of the projects should look like and shows how the user interacts with the application.
+\paragraph{Requirements traceability} shows how the implemented elements actually fulfill the requirements and goals requested by the RASD document.
+\paragraph{Implementation, Integration and Test plan} provides the relative schedules which developers have to follow in order to achieve the optimal outcome.
+\paragraph{Effort spent} shows for each section the effort spent by individual group member.

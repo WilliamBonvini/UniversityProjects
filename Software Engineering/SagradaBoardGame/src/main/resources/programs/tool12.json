@@ -1,0 +1,43 @@
+{"microOperationList":[
+  {"type":"checkpoint", "parameters":[]},
+  {"type":"subfavours",   "parameters":["12"]},
+  {"type":"program",  "parameters":["src/main/resources/programs/reset_filters"]},
+  {"type":"reset", "parameters":["input"]},
+
+  {"type":"filter", "parameters":["roundtrackfullcell","yes"]},
+  {"type":"input", 	"parameters":["roundtrack"]},
+  {"type":"filter", "parameters":["roundtrackfullcell","no"]},
+  {"type":"setaside", "parameters":["roundtrack"]},
+
+  {"type":"filter", "parameters":["selectedcolor","yes"]},
+
+  {"type":"filter", "parameters":["fullcell","yes"]},
+  {"type":"input", 	"parameters":["board"]},
+  {"type":"filter", "parameters":["fullcell","no"]},
+  {"type":"move", 	"parameters":["1","board","user","current","append"]},
+
+  {"type":"filter", "parameters":["selectedcolor","no"]},
+
+  {"type":"filter", "parameters":["emptycell","boardcolor","boardnumber","dienumber","diecolor","neardie","yes"]},
+  {"type":"input", 	"parameters":["board"]},
+  {"type":"filter", "parameters":["emptycell","boardcolor","boardnumber","dienumber","diecolor","neardie","no"]},
+  {"type":"move", 	"parameters":["all","current","random","board","user"]},
+
+  {"type":"checkpoint", "parameters":[]},
+
+  {"type":"filter", "parameters":["selectedcolor","yes"]},
+
+  {"type":"filter", "parameters":["fullcell","yes"]},
+  {"type":"input", 	"parameters":["board"]},
+  {"type":"filter", "parameters":["fullcell","no"]},
+  {"type":"move", 	"parameters":["1","board","user","current","append"]},
+
+  {"type":"filter", "parameters":["selectedcolor","no"]},
+
+  {"type":"filter", "parameters":["emptycell","boardcolor","boardnumber","dienumber","diecolor","neardie","yes"]},
+  {"type":"input", 	"parameters":["board"]},
+  {"type":"filter", "parameters":["emptycell","boardcolor","boardnumber","dienumber","diecolor","neardie","no"]},
+  {"type":"move", 	"parameters":["all","current","random","board","user"]},
+
+  {"type":"checkpoint", "parameters":[]}
+]}

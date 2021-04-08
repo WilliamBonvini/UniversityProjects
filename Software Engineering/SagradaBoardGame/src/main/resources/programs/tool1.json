@@ -1,0 +1,34 @@
+{"microOperationList":[
+  {"type":"checkpoint", "parameters":[]},
+  {"type":"subfavours",   "parameters":["1"]},
+  {"type":"program",  "parameters":["src/main/resources/programs/reset_filters"]},
+  {"type":"reset", "parameters":["input"]},
+
+  {"type":"input", 	"parameters":["pool"]},
+  {"type":"move", 	"parameters":["1","pool","user","current","append"]},
+
+  {"type":"restriction",  "parameters":["number","1","2"]},
+  {"type":"restriction",  "parameters":["number","2","1"]},
+  {"type":"restriction",  "parameters":["number","2","3"]},
+  {"type":"restriction",  "parameters":["number","3","2"]},
+  {"type":"restriction",  "parameters":["number","3","4"]},
+  {"type":"restriction",  "parameters":["number","4","3"]},
+  {"type":"restriction",  "parameters":["number","4","5"]},
+  {"type":"restriction",  "parameters":["number","5","4"]},
+  {"type":"restriction",  "parameters":["number","5","6"]},
+  {"type":"restriction",  "parameters":["number","6","5"]},
+  {"type":"choose", "parameters":["1"]},
+  {"type":"filter", "parameters":["modify", "yes"]},
+  {"type":"input", 	"parameters":["choose"]},
+  {"type":"filter", "parameters":["modify", "no"]},
+  {"type":"modify", "parameters":["user"]},
+  {"type":"reset",  "parameters":["restrictions"]},
+  {"type":"choose", "parameters":["0"]},
+
+  {"type":"filter", "parameters":["neardie", "emptycell","boardnumber","boardcolor","dienumber","diecolor","yes"]},
+  {"type":"input", 	"parameters":["board"]},
+  {"type":"filter", "parameters":["neardie", "emptycell","boardnumber","boardcolor","dienumber","diecolor","no"]},
+
+  {"type":"move", 	"parameters":["all","current","random","board","user"]},
+  {"type":"checkpoint", "parameters":[]}
+]}

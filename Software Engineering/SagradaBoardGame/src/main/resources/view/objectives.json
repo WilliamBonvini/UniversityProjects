@@ -1,0 +1,92 @@
+[
+  {
+    "id":1,
+    "name":"Colori diversi - Riga",
+    "description":"Righe senza colori ripetuti",
+    "value":"6"
+  },
+  {
+    "id":2,
+    "name":"Colori diversi - Colonna",
+    "description":"Colonne senza colori ripetuti",
+    "value":"5"
+  },
+  {
+    "id":3,
+    "name":"Sfumature diverse - Riga",
+    "description":"Righe senza sfumature ripetute",
+    "value":"5"
+  },
+  {
+    "id":4,
+    "name":"Sfumature diverse - Colonna",
+    "description":"Colonne senza sfumature ripetute",
+    "value":"4"
+  },
+  {
+    "id":5,
+    "name":"Sfumature Chiare",
+    "description":"Set di 1 & 2 ovunque",
+    "value":"2"
+  },
+  {
+    "id":6,
+    "name":"Sfumature Medie",
+    "description":"Set di 3 & 4 ovunque",
+    "value":"2"
+  },
+  {
+    "id":7,
+    "name":"Sfumature Scure",
+    "description":"Set di 5 & 6 ovunque",
+    "value":"2"
+  },
+  {
+    "id":8,
+    "name":"Sfumature Diverse",
+    "description":"Set di dadi di ogni valore ovunque",
+    "value":"5"
+  },
+  {
+    "id":9,
+    "name":"Diagonali Colorate",
+    "description":"Numero di dadi dello stesso colore diagonalmente adiacenti",
+    "value":"#"
+  },
+  {
+    "id":10,
+    "name":"Varieta' di Colore",
+    "description":"Set di dadi di ogni colore ovunque",
+    "value":"4"
+  },
+  {
+    "id":11,
+    "name":"Sfumature Rosse",
+    "description":"Somma dei valori su tutti i dadi rossi",
+    "value":"*"
+  },
+  {
+    "id":12,
+    "name":"Sfumature Gialle",
+    "description":"Somma dei valori su tutti i dadi gialli",
+    "value":"*"
+  },
+  {
+    "id":13,
+    "name":"Sfumature Verdi",
+    "description":"Somma dei valori su tutti i dadi verdi",
+    "value":"*"
+  },
+  {
+    "id":14,
+    "name":"Sfumature Blu",
+    "description":"Somma dei valori su tutti i dadi blu",
+    "value":"*"
+  },
+  {
+    "id":15,
+    "name":"Sfumature Viola",
+    "description":"Somma dei valori su tutti i dadi viola",
+    "value":"*"
+  }
+]

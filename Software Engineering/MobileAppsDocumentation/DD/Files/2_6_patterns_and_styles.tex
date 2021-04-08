@@ -1,0 +1,35 @@
+\newpage
+{\color{bluesec}\subsection{Selected architectural styles and patterns}}
+
+{\color{bluesec}\subsubsection{Architectural styles}}
+The adopted architecture for the TrackMe environment is a client-server, 3-tier architecture, divided in: presentation tier, logic tier and data tier.
+
+The presentation tier is formed by all the applications offered by TrackMe, both for mobile devices and PCs. It offers the access to the users to the relative service(s) they need, and does not contain any logic, resulting in a thin client. The Google Maps API are also present in this tier, because they are used only as a presentation function.
+
+The logic tier is composed mainly by the TrackMe server application, and manages the operations performed by all users of all the three services. In this tier are also present external services, which are composed by the ambulance calling service.
+
+The data tier is composed by the Amazon Web Services. It's used by the logic tier, or in detail by the server application, to store and use all the users' data.
+
+\paragraph{}The 3-tier architecture allows advantages such as decoupling, maintainability and reusability. Decoupling allows to develop indipendently one tier from the others, and increases maintainability. Being each tier separated, each one is more easily maintainable: for instance the smartphone apps, which work in a constantly evolving environment and often have to be updated accordingly. Finally, the logic separated from the other tiers allows to reuse components and extend itself with new services.
+
+It's also worth noticing that the architecture adopted is mostly event-based, where users generate events and eventually receive an answer.
+
+{\color{bluesec}\subsubsection{Patterns}}
+\paragraph{Model View Controller}
+The MVC pattern is naturally adapted to the TrackMe 3-tier architecture: clients applications are the View, as they only have a GUI function. The Model is represented by a part of the server, which manages the logic of the applications and partially by the DB and external services. Finally the Controller is the other part of the server, which manages and instradates the various users' inputs and requests.
+GenericDispatcher, D4HDispatcher, T4RDispatcher and AuthenticationManager are the components which form the Controller, the others compose instead part of the Model.
+
+\paragraph{Data access component}
+Data access component pattern consists in an abstraction to the access of a large amount of data, to reduce complexity and enable additional data consistency. This is present because of the use of AWS services, and also in the query service for TPs.
+
+\paragraph{Provider adapter}
+The provider adapter pattern is used to separate the logic of retrieval of data from the DB from the concrete implementation. This approach allows abstraction and more versatiliy and maintainability: if in the future another DB service should be adopted instead of AWS, the core of the server would not be refactored or modified. Instead only the provider adapter component would be changed.
+
+\paragraph{Elastic Queueing}
+Considering the asynchronous, event-based environment in which the TrackMe server must operate, a dynamic usage of resources is mandatory in order to achieve good performances. The elastic queueing pattern provides as solution a queue for incoming messages to the server, which is used, based on the number of requests, to adjust the number of components in the system and to manage resources for target components in the application.
+
+\paragraph{Stateless Component}
+For the most part, the server application is composed by stateless component. The only exceptions are D4HSubscriptionProvider, which is a Singleton, and T4RMapManager. Other components do not need a state to operate, allowing scalability and dynamicity for resouce allocation.
+
+\paragraph{Elastic component}
+Strictly related to the elastic queueing and stateless component patterns, the elastic component pattern provides dynamicity to the resources granted to components; a behaviour perfectly adapted to the described environment, which could need more or less resources allocated for each component depending on the situation. It's worth noticing that the elastic component pattern is consistently simplified by the fact that the scalable components are mostly stateless.

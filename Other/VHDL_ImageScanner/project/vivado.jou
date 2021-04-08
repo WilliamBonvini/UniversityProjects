@@ -1,0 +1,16 @@
+#-----------------------------------------------------------
+# Vivado v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Sat Apr 28 18:52:28 2018
+# Process ID: 8244
+# Current directory: D:/polimi/ImageScanner
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5872 D:\polimi\ImageScanner\ImageScanner.xpr
+# Log file: D:/polimi/ImageScanner/vivado.log
+# Journal file: D:/polimi/ImageScanner\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/polimi/ImageScanner/ImageScanner.xpr
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1

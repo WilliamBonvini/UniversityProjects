@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Sat Apr 28 18:52:28 2018
+# Process ID: 8244
+# Current directory: D:/polimi/ImageScanner
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5872 D:\polimi\ImageScanner\ImageScanner.xpr
+# Log file: D:/polimi/ImageScanner/vivado.log
+# Journal file: D:/polimi/ImageScanner\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/polimi/ImageScanner/ImageScanner.xpr
+CRITICAL WARNING: [Project 1-19] Could not find the file 'C:/Users/il_le/Downloads/testbench3.vhd'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'C:/Users/il_le/Downloads/testbench2.vhd'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2017.3/data/ip'.
+open_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 730.480 ; gain = 35.574
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1

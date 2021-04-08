@@ -1,0 +1,8 @@
+Vivado Simulator 2017.3
+Time resolution is 1 ps
+Failure: FAIL high bits
+Time: 1012500 ps  Iteration: 1  Process: /quadrato/test  File: D:/polimi/ImageScanner/ImageScanner.srcs/sim_1/new/quadrato.vhd
+$finish called at time : 1012500 ps : File "D:/polimi/ImageScanner/ImageScanner.srcs/sim_1/new/quadrato.vhd" Line 122
+Failure: FAIL high bits
+Time: 1012500 ps  Iteration: 1  Process: /quadrato/test  File: D:/polimi/ImageScanner/ImageScanner.srcs/sim_1/new/quadrato.vhd
+$finish called at time : 1012500 ps : File "D:/polimi/ImageScanner/ImageScanner.srcs/sim_1/new/quadrato.vhd" Line 122

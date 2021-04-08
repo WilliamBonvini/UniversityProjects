@@ -1,0 +1,15 @@
+{"microOperationList":[
+  {"type":"checkpoint", "parameters":[]},
+  {"type":"subfavours",   "parameters":["9"]},
+  {"type":"program",  "parameters":["src/main/resources/programs/reset_filters"]},
+  {"type":"reset", "parameters":["input"]},
+
+  {"type":"input", 	"parameters":["pool"]},
+  {"type":"move", 	"parameters":["1","pool","user","current","append"]},
+
+  {"type":"filter", "parameters":["fardie","emptycell","boardnumber","boardcolor","dienumber","diecolor","yes"]},
+  {"type":"input", 	"parameters":["board"]},
+  {"type":"filter", "parameters":["fardie","emptycell","boardnumber","boardcolor","dienumber","diecolor","no"]},
+  {"type":"move", 	"parameters":["all","current","random","board","user"]},
+  {"type":"checkpoint", "parameters":[]}
+]}

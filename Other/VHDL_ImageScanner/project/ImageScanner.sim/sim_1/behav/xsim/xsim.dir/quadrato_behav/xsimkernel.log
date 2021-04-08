@@ -1,0 +1,7 @@
+Running: xsim.dir/quadrato_behav/xsimk.exe -simmode gui -wdb quadrato_behav.wdb -simrunnum 0 -socket 1906
+Design successfully loaded
+Design Loading Memory Usage: 7592 KB (Peak: 7592 KB)
+Design Loading CPU Usage: 15 ms
+Simulation completed
+Simulation Memory Usage: 10524 KB (Peak: 10524 KB)
+Simulation CPU Usage: 46 ms

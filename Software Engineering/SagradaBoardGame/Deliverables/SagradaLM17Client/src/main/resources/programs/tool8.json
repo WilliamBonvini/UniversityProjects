@@ -1,0 +1,10 @@
+{"microOperationList":[
+  {"type":"checkpoint", "parameters":[]},
+  {"type":"subfavours",   "parameters":["8"]},
+  {"type":"reset", "parameters":["input"]},
+
+  {"type":"program", "parameters":["src/main/resources/programs/draft"]},
+
+  {"type":"deletenext", "parameters":[]},
+  {"type":"checkpoint", "parameters":[]}
+]}

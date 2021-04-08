@@ -1,0 +1,203 @@
+This section consists in mapping each requirement of the project with the the components that are partially or completely responsible for the realization of such requirement.
+In order of better showing the mapping we firstly mapped the goals to the components, indicating what requirements have to be fullfilled by such goals (such last indication was already present in the RASD).
+Afterwards requirements are directly linked to components.
+\newline
+{\color{bluesec}\subsection{Mapping Goals to Components}}
+
+\begin{itemize}
+\item G1 - The Data4Help application gives constantly new data accordingly to users’ activities.
+\newline [R8], [R9], [R10], [R11], [R13], [R14], [FR1];
+\begin{enumerate}
+	\item AWS
+	\item D4HQueryService
+	\item D4HDispatcher
+	\item GenericDispatcher
+\end{enumerate}
+
+
+\item G2 - Registered TPs (Third Parties) can send requests to specific users if they know their SSN or CF in order to retrieve specific data. These users can accept or refuse the proposal.
+\newline [R2], [R3], [R8], [R10],[FR1],[FR2];
+\begin{enumerate}
+	\item D4HSingleUserRequestService
+	\item D4HDispatcher
+	\item GenericDispatcher
+\end{enumerate}
+
+
+\item G3 - Registered TPs have access to make queries to Data4Help’s database in order to get anonymized data by filtering by one or more parameters as they need.
+\newline [R1], [R2], [R3], [R7], [R8], [R10], [R11], [FR3];
+\begin{enumerate}
+	\item D4HQueryService
+	\item AWS
+	\item D4HDispatcher
+	\item GenericDispatcher
+\end{enumerate}
+
+
+\item G4 - Results for TPs’ queries are given only if the number of matches is greater or equal than 1000. 
+\newline [R1], [R2], [R7];
+\begin{enumerate}
+	\item D4HQueryService
+\end{enumerate}
+
+
+\item G5 - Each user of the services offered by TrackMe must be identifiable within the system in order to gather his data and communicate with him.
+\newline [R6], [FR1], [R12], [FR4];
+\begin{enumerate}
+	\item AuthenticationManager
+	\item AWS
+\end{enumerate}
+
+
+
+\item G6 - AutomatedSOS sends automatically an ambulance request when and only when user's values are below a specific critical threshold, specifying the user's position.
+\newline [R5], [R6], [R9], [R10], [R11], [R14], [FR5], [FR6];
+\begin{enumerate}
+	\item D4HUpdateService
+	\item AutomatedSOSForwarder
+\end{enumerate}
+
+\item G7 - Users of Track4Run are able to create a run defining the precise path.
+\newline [R1], [R6], [R7], [R14][FR7],[FR8];
+\begin{enumerate}
+	\item T4RRunCreator
+	\item AWS
+\end{enumerate}
+
+
+
+\item G8 - Users of Track4Run are able to take part in a created run as runners.
+\newline [R7], [R14], [FR9];
+\begin{enumerate}
+	\item AWS
+	\item T4RJoinRunService
+\end{enumerate}
+
+
+
+\item G9 - Users of Track4Run can see real-time runners' positions in runs such runners are subscribed in.
+\newline [R4], [R7], [R11];
+\begin{enumerate}
+	\item T4RMapManager
+	\item AWS
+\end{enumerate}
+
+\end{itemize}
+
+
+{\color{bluesec}\subsection{Mapping Requirements to Components}}
+
+
+\begin{itemize}
+
+
+\item [R1] - Hardware interface: This application needs a data warehouse to store all the user data and to allow high performance researchs with large amounts of data.
+\begin{itemize}
+	\item AWS
+\end{itemize}
+
+
+\item [R2] - Software interface: Amazon Redshift as a data warehouse on top of Amazon S3 to store all the data in an efficent manner;
+\begin{itemize}
+	\item AWS
+\end{itemize}
+
+
+\item [R3] - Software interface: Google Maps for converting stored GPS data into human readable data for the third parties clients;
+\begin{itemize}
+	\item Google Maps
+\end{itemize}
+
+
+\item [R4] - Software interface: Google Maps for the Track4Run real-time map service.
+\begin{itemize}
+	\item Google Maps
+\end{itemize}
+
+
+\item [R5] - Software interface :The API interface for the automatic messagge sent to the nearest hospital.
+\begin{itemize}
+	\item Hospital APIs
+\end{itemize}
+
+
+\item [R6] - Both users and third parties will have to use HTTPS to communicate with the TrackMe server, because security and privacy is an important factor in both cases;
+\begin{itemize}
+	\item EntryPoint
+\end{itemize}
+
+
+\item [R7] - Performance requirements regarding Data4Help and Track4Run: they both have to manage a large amount of people that can range from 0 (i.e. an event organized through Track4Run) to 10000 (i.e. a fair amount of user that we should excpect from Data4Help) based on the current users requests.
+\begin{itemize}
+	\item GenericDispatcher
+	\item D4HDispatcher
+	\item D4HUpdateService
+	\item AWS
+	\item T4RDispatcher
+	\item T4RMapManager
+	\item T4RJoinRunService
+	\item T4RRunCreator
+\end{itemize}
+
+
+\item [R8] - Internally the data that is collected through Data4Help can be stored in any way that is comfortable for the developers to work with, but when it is delivered to the third parties it must use a standard format.
+This means that:
+\begin{enumerate}
+\item [R8.1] - the TP can choose of receiving the results of its requests in the form of a summary in a PDF file. 
+\item [R8.2] - the TP can choose of receiving the results of its request in a database file, in such a way that the third parties can manipulate the data the way they like.
+\item [R8.3] - The TP can request both the formats above.  
+\end{enumerate}
+\begin{itemize}
+	\item D4HQueryService
+\end{itemize}
+
+
+\item [R9] - Bandwidth may be a constraint, because developers need to pay attention to send only the essential data from the apps to the server, because in an hypotetical situation the application may drain too much mobile data from the users’ smartphone. To achieve this is possible to set a reasonable amount of time to be waited between each single user’s update of his/her values to the server. On the contrary, AutomatedSOS doesn’t have any bandwidth limitation.
+\begin{itemize}
+	\item Data4Help user's app
+\end{itemize}
+
+\item [R10] - Reliability is the main concern for AutomatedSOS, because of the nature of the service itself, and surely it is important in the development of the Data4Help module. Secondly, reliability is not the main concern in Track4Run.
+The whole system should at least be 99.999\% reliable.
+\begin{itemize}
+	\item GenericDispatcher
+	\item D4HDispatcher
+	\item AutomatedSOSForwarder
+	\item D4HUpdateService
+\end{itemize}
+
+
+\item [R11] - Availability: 
+AutomatedSOS needs a six 9s (99.9999\%) availability, due to the high importance availability plays for this service, while Data4Help and Track4Run need at least a five 9s (99.999\%) availability.
+\begin{itemize}
+	\item GenericDispatcher
+	\item D4HDispatcher
+	\item AutomatedSOSForwarder
+	\item D4HUpdateService
+\end{itemize}
+
+
+\item [R12] - Security: Anonymization must be granted giving the fact that we are working with very sensible data.
+Since AutomatedSOS and Track4Run talk with Data4Help, this means that the communication between the modules must be protected as well. 
+\begin{itemize}
+	\item AuthenticationManager
+	\item D4HQueryService
+\end{itemize}
+
+\item[R13] - Mantainability is a big concern for all the three services. Given the fact that the application is mainly developed for Android and iOS, it must be easily maintainable, because of the frequent updates of both the operating systems. This translates into the decoupling of the components of the system.
+\begin{itemize}
+	\item No particular component is responsible for this requirement: such responsibility has to be found in the way the components interact with one another.
+\end{itemize}
+
+
+
+\item [R14] - Portability: The application that is developed for Data4Help users must work for all iOS’ and Android’s updates by the date of launch of the app. The same can be applied to Track4Run and AutomatedSOS because it’s not easy to foresee how smartwatches’ and smartphones’ market will change in the future. The desktop application of Data4Help instead has not the same portability requirements, because, being developed for the Windows operating system, we can rely on his well established legacy of portability;
+No component of the server has such responability.
+It's duty of the client's apps developers to make the services portable from one OS to the other.
+\begin{itemize}
+	\item Client
+\end{itemize}
+
+
+
+\end{itemize}

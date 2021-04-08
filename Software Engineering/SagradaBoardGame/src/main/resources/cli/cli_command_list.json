@@ -1,0 +1,10 @@
+{
+  "poolCommands":["riserva", "r", "pool", "p"],
+  "boardCommands":["vetrata", "v", "board", "b"],
+  "toolCommands":["attrezzo", "a", "tool", "t"],
+  "roundTrackCommands":["tracciato","tr","roundtrack","rt"],
+  "helpCommands":["aiuto","help","info","h","?"],
+  "quitCommands":["quit", "esci"],
+  "passCommands":["passa","pass","skip","fine","f"],
+  "switchConnectionCommands":["switch", "cambia", "riconnetti", "reconnect"]
+}

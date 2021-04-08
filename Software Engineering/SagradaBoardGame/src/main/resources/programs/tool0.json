@@ -1,0 +1,7 @@
+{"microOperationList":[
+
+  {"type":"program", "parameters":["src/main/resources/programs/draft"]},
+
+  {"type":"input", 	"parameters":["tool"]},
+  {"type":"tool", 	"parameters":["nodraft"]}
+]}

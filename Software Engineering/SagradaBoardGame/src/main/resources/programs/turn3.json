@@ -1,0 +1,9 @@
+{"microOperationList":[
+  {"type":"move", 	"parameters":["all","current","random","pool","append"]},
+  {"type":"checkpoint",  "parameters":[]},
+  {"type":"reset", "parameters":["input"]},
+
+  {"type":"control",  "parameters":["3"]},
+  {"type":"input", 	  "parameters":["tool"]},
+  {"type":"tool", 	  "parameters":["draft"]}
+]}

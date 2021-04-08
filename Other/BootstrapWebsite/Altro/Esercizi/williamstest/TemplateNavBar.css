@@ -1,0 +1,57 @@
+body { background-color: skyBlue; min-height:200vh;}/* MORE THAN 75 Xl */
+@media (max-width: 74.9em) { body {background-color: pink;} }/* LESS THAN 75 Lg */
+@media (max-width: 61.9em) { body {background-color: blue;} }/* LESS THAN 62 Md */
+@media (max-width: 47.9em) { body {background-color: green;} }/* LESS THAN 48 Sm */
+@media (max-width: 33.9em) { body {background-color: red;} }/* LESS THAN 34 Xs */
+
+/* Navbar Styles */
+.navbar{border-radius:0;}
+.navbar-toggler{border:1px solid rgba(0,0,0,0.2);}
+.navbar-toggler:hover{background:rgb(240,240,240)}
+.navbar-toggler:focus{outline:0;}
+
+/* Navbar Collapse Styles To Stack Items At Mobile Widths*/
+@media(max-width:47.9em) {
+  .navbar .navbar-brand {float:none;display: inline-block;}
+  .navbar .navbar-nav>.nav-item { float: none; margin-left: .1rem;}
+  .navbar .navbar-nav {float:none !important;}
+  .nav-item{width:100%;text-align:left;} 
+}
+
+
+
+
+
+
+
+/* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }

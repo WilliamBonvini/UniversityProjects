@@ -1,0 +1,69 @@
+\color{black}
+{\color{secblue}\subsection{Purpose}} The purpose of this document is to give an overview of the Data4Help, AutomatedSOS and Track4Run services, and specify its requirements, functional and non functional and associated technical constraints.
+People who are interested in this service would need to download the relative app on their smartphone, and their data will be automatically collected by TrackMe.
+Data4Help is a service which aims to gather information about people's health status in order to share it with third-parties.
+AutomatedSOS aims to help ederly people by constantly monitoring their health status and automatically calling an ambulance in case of an emergency.
+Track4Run's purpose is to organize races among runners. It allows the creation of a run and its enrollment. Also, it provides a real-time map of the runners for the spectators.
+
+{\color{secblue}\subsubsection{Goals}}
+\begin{itemize}
+\item G1 - The Data4Help application gives constantly new data accordingly to users' activities.
+\item G2 - Registered TPs (Third Parties) can send requests to specific users if they know their SSN or CF in order to retrieve specific data. These users can accept or refuse the proposal.
+\item G3 - Registered TPs have access to make queries to Data4Help's database in order to get anonymized data by filtering by one or more parameters as they need.
+\item G4 - Results for TPs' queries are given only if the number of matches is greater or equal than 1000.
+\item G5 - Each user of the services offered by TrackMe is identifiable within the system in order to gather his data and communicate with him.
+\item G6 - AutomatedSOS sends automatically an ambulance request when and only when user's values are below a specific critical threshold, specifying the user's position.
+\item G7 - Users of Track4Run are able to create a run defining the precise path.
+\item G8 - Users of Track4Run are able to take part in a created run as runners.
+\item G9 - Users of Track4Run can see real-time runners' positions in runs such runners are subscribed in.
+\end{itemize}
+{\color{secblue}\subsection{Scope}}
+{\color{secblue}\subsubsection{Project description}}
+Data4Help is a service mainly thought for big companies who want to make better targeted choices for their business. Since the service acquires the health status of the users, most of the companies interested in the service are supposely going to be related to lifestyle, fitness, and generally the sports field.
+The position of the users could be a very useful information for third parties related to the transportation system and tourism.
+Health status and position combined offer a good overview of the health situation of a population of a specific area selected by the third party. Such data can be used for pools and statistical purposes, so being attractive to health related realities: pharmacheutical industry, health organizations (state entities and non state ones).
+The final product will consist in 3 main softwares:
+\begin{itemize}
+\item The server-side software;
+\item The mobile application for standard-users;
+\item The desktop application for third-parties users.
+\end{itemize}
+There are quite a few shared phenomena that occur in the projects:
+\begin{itemize}
+\item A third party requests a query in Data4Help;
+\item One of the three apps gathers information;
+\item AutomatedSOS calls an ambulance in case of an emergency;
+\item A run gets created in Track4Run by an user.
+\end{itemize}
+{\color{secblue}\subsection{Definitions, Acronyms, Abbreviations}}
+{\color{secblue}\subsubsection{Definitions}}
+\begin{itemize}
+\item User: a user is a person who uses at least one of Track4Run's services by installing it on its smartphone/PC and signing up.
+\item Third-party: any organization/company/authority who registers to Data4Help in order to gather user's information.
+\item Query: A filtered search asked to the Data4Help's DB.
+\item Run: an event organized through Track4Run service, in a specific location.
+\end{itemize}
+{\color{secblue}\subsubsection{Acronyms}}
+\begin{itemize}
+\item \b{TP:} Third Party (TPs for plural)
+\item \b{SSN:} Social Security Number
+\item \b{CF:} Codice Fiscale
+\item \b{DB:} Database
+\item \b{ASOS:} AutomatedSOS
+\end{itemize}
+{\color{secblue}\subsubsection{Abbreviations}}
+\begin{itemize}
+\item \b{[Gx]:} x-th Goal
+\item \b{[Dx]:} x-th Domain assumption
+\item \b{[Rx]:} x-th Requirement
+\item \b{[FRx]:} x-th Functional Requirement
+\end{itemize}
+{\color{secblue}\subsection{Revision history}}
+the version 2 of the RASD present the following changes:
+\begin{itemize}
+\item removed chat system reference in mockups and use cases
+\item Fixed english mistakes and typos
+\item Modified Alloy model for Track4Run: It no more shows users subscribed as participants or spectators but instead there is a new information on which participants are visible in a certain time. The predicates and assertions partially changed, to show a more coherent aspect.
+\item Added Data4Help's Third party's mockups 
+\item Added the class TrackMe in the UML diagram
+\end{itemize}

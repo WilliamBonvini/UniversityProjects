@@ -1,0 +1,14 @@
+{
+  "componentBag":"bag",
+  "componentBoard":"board",
+  "componentFavours":"favours",
+  "componentPlayer":"player",
+  "componentPool":"pool",
+  "componentRoundTrack":"roundtrack",
+  "componentTool":"tool",
+  "componentChoose":"choose",
+  "componentPass":"pass",
+  "gridSizeX":5,
+  "gridSizeY":4,
+  "numOfRounds":10
+}

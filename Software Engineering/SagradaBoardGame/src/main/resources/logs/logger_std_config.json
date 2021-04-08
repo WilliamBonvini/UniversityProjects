@@ -1,0 +1,8 @@
+{
+  "name":"",
+  "logFile":"src/main/resources/logs/default.log",
+  "filterLevel":0,
+  "consoleMode":true,
+  "colorMode":true,
+  "writeMode":true
+}

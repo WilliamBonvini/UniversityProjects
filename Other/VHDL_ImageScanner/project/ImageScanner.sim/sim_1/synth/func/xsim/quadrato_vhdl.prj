@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"quadrato_func_synth.vhd" \
+"../../../../../ImageScanner.srcs/sim_1/new/quadrato.vhd" \
+
+# Do not sort compile order
+nosort

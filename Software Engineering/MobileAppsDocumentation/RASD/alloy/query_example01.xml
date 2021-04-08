@@ -1,0 +1,232 @@
+<alloy builddate="2015-02-22 18:21 EST">
+
+<instance bitwidth="4" maxseq="4" command="Run showQuery for 4 but 0 Request, 0 ThirdParty" filename="C:\Users\Loren\Desktop\Uni\Soft Eng 2\Project\aa-Track4Me\BarilaniBonviniCarnaghi\RASD\alloy\trackMeAlloy.als">
+
+<sig label="seq/Int" ID="0" parentID="1" builtin="yes">
+</sig>
+
+<sig label="Int" ID="1" parentID="2" builtin="yes">
+</sig>
+
+<sig label="String" ID="3" parentID="2" builtin="yes">
+</sig>
+
+<sig label="this/Position" ID="4" parentID="2">
+   <atom label="Position$0"/>
+   <atom label="Position$1"/>
+</sig>
+
+<field label="latitude" ID="5" parentID="4">
+   <tuple> <atom label="Position$0"/> <atom label="2"/> </tuple>
+   <tuple> <atom label="Position$1"/> <atom label="1"/> </tuple>
+   <types> <type ID="4"/> <type ID="1"/> </types>
+</field>
+
+<field label="longitude" ID="6" parentID="4">
+   <tuple> <atom label="Position$0"/> <atom label="1"/> </tuple>
+   <tuple> <atom label="Position$1"/> <atom label="2"/> </tuple>
+   <types> <type ID="4"/> <type ID="1"/> </types>
+</field>
+
+<sig label="this/Male" ID="7" parentID="8" one="yes">
+   <atom label="Male$0"/>
+</sig>
+
+<sig label="this/Female" ID="9" parentID="8" one="yes">
+   <atom label="Female$0"/>
+</sig>
+
+<sig label="this/Gender" ID="8" parentID="2" abstract="yes">
+</sig>
+
+<sig label="this/UserData" ID="10" parentID="2">
+   <atom label="UserData$0"/>
+   <atom label="UserData$1"/>
+   <atom label="UserData$2"/>
+   <atom label="UserData$3"/>
+</sig>
+
+<field label="position" ID="11" parentID="10">
+   <tuple> <atom label="UserData$0"/> <atom label="Position$0"/> </tuple>
+   <tuple> <atom label="UserData$1"/> <atom label="Position$1"/> </tuple>
+   <tuple> <atom label="UserData$2"/> <atom label="Position$0"/> </tuple>
+   <tuple> <atom label="UserData$3"/> <atom label="Position$0"/> </tuple>
+   <types> <type ID="10"/> <type ID="4"/> </types>
+</field>
+
+<field label="age" ID="12" parentID="10">
+   <tuple> <atom label="UserData$0"/> <atom label="4"/> </tuple>
+   <tuple> <atom label="UserData$1"/> <atom label="0"/> </tuple>
+   <tuple> <atom label="UserData$2"/> <atom label="4"/> </tuple>
+   <tuple> <atom label="UserData$3"/> <atom label="4"/> </tuple>
+   <types> <type ID="10"/> <type ID="1"/> </types>
+</field>
+
+<field label="gender" ID="13" parentID="10">
+   <tuple> <atom label="UserData$0"/> <atom label="Male$0"/> </tuple>
+   <tuple> <atom label="UserData$1"/> <atom label="Female$0"/> </tuple>
+   <tuple> <atom label="UserData$2"/> <atom label="Male$0"/> </tuple>
+   <tuple> <atom label="UserData$3"/> <atom label="Female$0"/> </tuple>
+   <types> <type ID="10"/> <type ID="8"/> </types>
+</field>
+
+<sig label="this/User" ID="14" parentID="2">
+   <atom label="User$0"/>
+   <atom label="User$1"/>
+   <atom label="User$2"/>
+   <atom label="User$3"/>
+</sig>
+
+<field label="data" ID="15" parentID="14">
+   <tuple> <atom label="User$0"/> <atom label="UserData$3"/> </tuple>
+   <tuple> <atom label="User$1"/> <atom label="UserData$2"/> </tuple>
+   <tuple> <atom label="User$2"/> <atom label="UserData$1"/> </tuple>
+   <tuple> <atom label="User$3"/> <atom label="UserData$0"/> </tuple>
+   <types> <type ID="14"/> <type ID="10"/> </types>
+</field>
+
+<sig label="this/ThirdParty" ID="16" parentID="2">
+</sig>
+
+<field label="grantingUsers" ID="17" parentID="16">
+   <types> <type ID="16"/> <type ID="14"/> </types>
+</field>
+
+<sig label="this/Request" ID="18" parentID="2">
+</sig>
+
+<field label="thirdParty" ID="19" parentID="18">
+   <types> <type ID="18"/> <type ID="16"/> </types>
+</field>
+
+<field label="user" ID="20" parentID="18">
+   <types> <type ID="18"/> <type ID="14"/> </types>
+</field>
+
+<field label="grantedAccess" ID="21" parentID="18">
+   <types> <type ID="18"/> <type ID="22"/> </types>
+</field>
+
+<sig label="this/Query" ID="23" parentID="2">
+   <atom label="Query$0"/>
+   <atom label="Query$1"/>
+   <atom label="Query$2"/>
+   <atom label="Query$3"/>
+</sig>
+
+<field label="isReturned" ID="24" parentID="23">
+   <tuple> <atom label="Query$0"/> <atom label="boolean/False$0"/> </tuple>
+   <tuple> <atom label="Query$1"/> <atom label="boolean/True$0"/> </tuple>
+   <tuple> <atom label="Query$2"/> <atom label="boolean/False$0"/> </tuple>
+   <tuple> <atom label="Query$3"/> <atom label="boolean/True$0"/> </tuple>
+   <types> <type ID="23"/> <type ID="22"/> </types>
+</field>
+
+<field label="usersResult" ID="25" parentID="23">
+   <tuple> <atom label="Query$0"/> <atom label="UserData$1"/> </tuple>
+   <tuple> <atom label="Query$1"/> <atom label="UserData$0"/> </tuple>
+   <tuple> <atom label="Query$1"/> <atom label="UserData$1"/> </tuple>
+   <tuple> <atom label="Query$1"/> <atom label="UserData$2"/> </tuple>
+   <tuple> <atom label="Query$1"/> <atom label="UserData$3"/> </tuple>
+   <tuple> <atom label="Query$2"/> <atom label="UserData$0"/> </tuple>
+   <tuple> <atom label="Query$2"/> <atom label="UserData$2"/> </tuple>
+   <tuple> <atom label="Query$3"/> <atom label="UserData$0"/> </tuple>
+   <tuple> <atom label="Query$3"/> <atom label="UserData$2"/> </tuple>
+   <tuple> <atom label="Query$3"/> <atom label="UserData$3"/> </tuple>
+   <types> <type ID="23"/> <type ID="10"/> </types>
+</field>
+
+<field label="groupByPosition" ID="26" parentID="23">
+   <tuple> <atom label="Query$0"/> <atom label="boolean/False$0"/> </tuple>
+   <tuple> <atom label="Query$1"/> <atom label="boolean/False$0"/> </tuple>
+   <tuple> <atom label="Query$2"/> <atom label="boolean/True$0"/> </tuple>
+   <tuple> <atom label="Query$3"/> <atom label="boolean/True$0"/> </tuple>
+   <types> <type ID="23"/> <type ID="22"/> </types>
+</field>
+
+<field label="position" ID="27" parentID="23">
+   <tuple> <atom label="Query$0"/> <atom label="Position$0"/> </tuple>
+   <tuple> <atom label="Query$1"/> <atom label="Position$1"/> </tuple>
+   <tuple> <atom label="Query$2"/> <atom label="Position$0"/> </tuple>
+   <tuple> <atom label="Query$3"/> <atom label="Position$0"/> </tuple>
+   <types> <type ID="23"/> <type ID="4"/> </types>
+</field>
+
+<field label="groupByAge" ID="28" parentID="23">
+   <tuple> <atom label="Query$0"/> <atom label="boolean/True$0"/> </tuple>
+   <tuple> <atom label="Query$1"/> <atom label="boolean/False$0"/> </tuple>
+   <tuple> <atom label="Query$2"/> <atom label="boolean/False$0"/> </tuple>
+   <tuple> <atom label="Query$3"/> <atom label="boolean/False$0"/> </tuple>
+   <types> <type ID="23"/> <type ID="22"/> </types>
+</field>
+
+<field label="age" ID="29" parentID="23">
+   <tuple> <atom label="Query$0"/> <atom label="0"/> </tuple>
+   <tuple> <atom label="Query$1"/> <atom label="4"/> </tuple>
+   <tuple> <atom label="Query$2"/> <atom label="5"/> </tuple>
+   <tuple> <atom label="Query$3"/> <atom label="6"/> </tuple>
+   <types> <type ID="23"/> <type ID="1"/> </types>
+</field>
+
+<field label="groupByGender" ID="30" parentID="23">
+   <tuple> <atom label="Query$0"/> <atom label="boolean/False$0"/> </tuple>
+   <tuple> <atom label="Query$1"/> <atom label="boolean/False$0"/> </tuple>
+   <tuple> <atom label="Query$2"/> <atom label="boolean/True$0"/> </tuple>
+   <tuple> <atom label="Query$3"/> <atom label="boolean/False$0"/> </tuple>
+   <types> <type ID="23"/> <type ID="22"/> </types>
+</field>
+
+<field label="gender" ID="31" parentID="23">
+   <tuple> <atom label="Query$0"/> <atom label="Female$0"/> </tuple>
+   <tuple> <atom label="Query$1"/> <atom label="Female$0"/> </tuple>
+   <tuple> <atom label="Query$2"/> <atom label="Male$0"/> </tuple>
+   <tuple> <atom label="Query$3"/> <atom label="Male$0"/> </tuple>
+   <types> <type ID="23"/> <type ID="8"/> </types>
+</field>
+
+<sig label="boolean/True" ID="32" parentID="22" one="yes">
+   <atom label="boolean/True$0"/>
+</sig>
+
+<sig label="boolean/False" ID="33" parentID="22" one="yes">
+   <atom label="boolean/False$0"/>
+</sig>
+
+<sig label="boolean/Bool" ID="22" parentID="2" abstract="yes">
+</sig>
+
+<sig label="univ" ID="2" builtin="yes">
+</sig>
+
+<skolem label="$showQuery_u" ID="34">
+   <tuple> <atom label="UserData$0"/> <atom label="User$3"/> </tuple>
+   <tuple> <atom label="UserData$1"/> <atom label="User$2"/> </tuple>
+   <tuple> <atom label="UserData$2"/> <atom label="User$1"/> </tuple>
+   <tuple> <atom label="UserData$3"/> <atom label="User$0"/> </tuple>
+   <types> <type ID="10"/> <type ID="14"/> </types>
+</skolem>
+
+<skolem label="$showQuery_q1" ID="35">
+   <tuple> <atom label="Query$3"/> </tuple>
+   <types> <type ID="23"/> </types>
+</skolem>
+
+<skolem label="$showQuery_q2" ID="36">
+   <tuple> <atom label="Query$2"/> </tuple>
+   <types> <type ID="23"/> </types>
+</skolem>
+
+<skolem label="$showQuery_q3" ID="37">
+   <tuple> <atom label="Query$1"/> </tuple>
+   <types> <type ID="23"/> </types>
+</skolem>
+
+</instance>
+
+<source filename="C:\Users\Loren\Desktop\Uni\Soft Eng 2\Project\aa-Track4Me\BarilaniBonviniCarnaghi\RASD\alloy\trackMeAlloy.als" content="open util/integer&#x000a;open util/boolean&#x000a;&#x000a;/**-------------------SIGNATURES-------------------**/&#x000a;&#x000a;--position of a user, represented with 2 simplified coordinates&#x000a;sig Position {&#x000a;&#x0009;latitude: one Int,&#x000a;&#x0009;longitude: one Int&#x000a;}&#x000a;{latitude &gt;= 0 and latitude &lt;= 2 and longitude &gt;= 0 and longitude &lt;= 2}&#x000a;&#x000a;&#x000a;--gender of a user&#x000a;abstract sig Gender{}&#x000a;one sig Male extends Gender{}&#x000a;one sig Female extends Gender{}&#x000a;&#x000a;--data of a user, retrieavable from TPs through Data4Help services&#x000a;sig UserData {&#x000a;&#x0009;position: one Position,&#x000a;&#x0009;age: one Int,&#x000a;&#x0009;gender: one Gender&#x000a;}&#x000a;{age &gt;= 0 and age &lt;= 5}&#x000a;&#x000a;--User of Data4Help&#x000a;sig User {&#x000a;&#x0009;data: one UserData,&#x000a;&#x0009;--requests: set Request&#x000a;}&#x000a;&#x000a;--Registered TP which can do global queries and requests to specific users.&#x000a;sig ThirdParty {&#x000a;&#x0009;grantingUsers: set User&#x000a;}&#x000a;&#x000a;--a request made by a TP to a User to grant access to the TP to the user&apos;s data, if accepted from user.&#x000a;sig Request {&#x000a;&#x0009;thirdParty: one ThirdParty,&#x000a;&#x0009;user: one User,&#x000a;&#x0009;grantedAccess: lone Bool&#x000a;&#x0009;--the Bool is lone because if the Bool is not set means the request is still pending&#x000a;}&#x000a;&#x000a;&#x000a;sig Query {&#x000a;&#x0009;isReturned: Bool,&#x000a;&#x0009;usersResult: set UserData,&#x000a;&#x0009;groupByPosition: Bool,&#x000a;&#x0009;position: lone Position,&#x000a;&#x0009;groupByAge: Bool,&#x000a;&#x0009;age: lone Int,&#x000a;&#x0009;groupByGender: Bool,&#x000a;&#x0009;gender: lone Gender&#x000a;}&#x000a;&#x000a;/**-------------------FACTS-------------------**/&#x000a;&#x000a;--at most one request can exist for each couple (third party, user)&#x000a;fact OnlyOneRequestForEachCouple{&#x000a;&#x0009;all disj r1, r2: Request |&#x000a;&#x0009;&#x0009;((r1.thirdParty != r2.thirdParty) or&#x000a;&#x0009;&#x0009;(r1.user != r2.user))&#x000a;}&#x000a;&#x000a;--each User has its own distinct UserData&#x000a;fact UniqueUserData {&#x000a;&#x0009;all disj u1, u2:User |&#x000a;&#x0009;&#x0009;u1.data != u2.data&#x000a;}&#x000a;&#x000a;--each UserData belongs to a User&#x000a;fact UserDataBoundToUser {&#x000a;&#x0009;all ud:UserData |&#x000a;&#x0009;&#x0009;some u:User |&#x000a;&#x0009;&#x0009;&#x0009;u.data = ud&#x000a;}&#x000a;&#x000a;--the requests a user has refer to him/her&#x000a;--fact UserRequestBound {&#x000a;&#x0009;&#x000a;&#x0009;&#x000a;&#x000a;--each user in list of a third party&apos;s granted user list has agreed to one and only request with that specific third party&#x000a;fact ThirdPartyKnownUsersMustHaveAgreed {&#x000a;&#x0009;all u: User, tp:ThirdParty |&#x000a;&#x0009;&#x0009;u in tp.grantingUsers&#x000a;&#x0009;&#x0009;implies&#x000a;&#x0009;&#x0009;(one r:Request |&#x000a;&#x0009;&#x0009;r.thirdParty = tp and r.user = u and r.grantedAccess = True)&#x000a;}&#x000a;&#x000a;--how a query works: its result is composed of users that have the same attribute as asked, if that attribute is asked.&#x000a;fact QueryStructure{&#x000a;&#x0009;all ud: UserData, q: Query |&#x000a;&#x0009;&#x0009;(ud in q.usersResult&#x000a;&#x0009;&#x0009;iff&#x000a;&#x0009;&#x0009;((q.groupByPosition = True) implies (q.position = ud.position)) and&#x000a;&#x0009;&#x0009;(q.groupByAge = True implies q.age = ud.age) and&#x000a;&#x0009;&#x0009;(q.groupByGender = True implies q.gender = ud.gender)&#x000a;&#x0009;&#x0009;)&#x000a;}&#x000a;&#x000a;--states when a query is returnable to the TP who asked it. It&apos;s returnable if the number of users is at least 3.&#x000a;fact returnableQuery{&#x000a;&#x0009;all q: Query |&#x000a;&#x0009;&#x0009;q.isReturned = True iff&#x000a;&#x0009;&#x0009;#q.usersResult &gt;= 3&#x000a;}&#x000a;&#x000a;/**-------------------FUNCTIONS-------------------**/&#x000a;&#x000a;/*fun isGlobalQuery[q:Query]: Bool {&#x000a;&#x0009;&#x000a;}*/&#x000a;&#x000a;/**-------------------ASSERTIONS-------------------**/&#x000a;--if a query has no constraint, must return all existing UserDatas&#x000a;assert GlobalQuery {&#x000a;&#x0009;all q:Query |&#x000a;&#x0009;&#x0009;(q.groupByPosition = False and q.groupByAge = False and q.groupByGender = False)&#x000a;&#x0009;&#x0009;implies&#x000a;&#x0009;&#x0009;(all ud:UserData | ud in q.usersResult)&#x000a;}&#x000a;&#x000a;&#x000a;/**-------------------PREDICATES-------------------**/&#x000a;&#x000a;pred showRequest {&#x000a;&#x0009;--at least one user has 2 or more requests but only a part of them accepted, and...&#x000a;&#x0009;some r1, r2:Request | r1.user = r2.user and &#x000a;&#x0009;&#x0009;r1.grantedAccess = True and r2.grantedAccess != True&#x000a;&#x0009;--..at the same time a TP has at least 2 requests, some accepted and some not&#x000a;&#x0009;some r1, r2:Request | r1.thirdParty = r2.thirdParty and &#x000a;&#x0009;&#x0009;r1.grantedAccess = True and r2.grantedAccess != True&#x000a;}&#x000a;&#x000a;--show at least a returnable query, a non-returnable one and a global query, all different ones&#x000a;pred showQuery {&#x000a;&#x0009;some disj q1, q2, q3: Query | &#x000a;&#x0009;&#x0009;--q1 is returnable&#x000a;&#x0009;&#x0009;(q1.isReturned = True) and&#x000a;&#x0009;&#x0009;--q2 is not returnable&#x000a;&#x0009;&#x0009;(q2.isReturned = False) and&#x000a;&#x0009;&#x0009;--q3 is a global query&#x000a;&#x0009;&#x0009;(q3.groupByPosition = False and q3.groupByAge = False and q3.groupByGender = False)&#x000a;}&#x000a;&#x000a;check GlobalQuery&#x000a;&#x000a;run showQuery for 4 but 0 Request, 0 ThirdParty&#x000a;&#x000a;run showRequest for 4 but 0 Query&#x000a;&#x000a;&#x000a;&#x000a;&#x000a;--To demo:&#x000a;--a user can accept a request from a TP and deny from another&#x000a;"/>
+
+<source filename="\$alloy4$\models\util\integer.als" content="module util/integer&#x000a;&#x000a;/*&#x000a; * A collection of utility functions for using Integers in Alloy.&#x000a; * Note that integer overflows are silently truncated to the current bitwidth&#x000a; * using the 2&apos;s complement arithmetic, unless the &quot;forbid overfows&quot; option is&#x000a; * turned on, in which case only models that don&apos;t have any overflows are &#x000a; * analyzed. &#x000a; */&#x000a;&#x000a;fun add  [n1, n2: Int] : Int { this/plus[n1, n2] }&#x000a;fun plus [n1, n2: Int] : Int { n1 fun/add n2 }&#x000a;&#x000a;fun sub   [n1, n2: Int] : Int { this/minus[n1, n2] }&#x000a;fun minus [n1, n2: Int] : Int { n1 fun/sub n2 }&#x000a;&#x000a;fun mul [n1, n2: Int] : Int { n1 fun/mul n2 }&#x000a;&#x000a;/**&#x000a; * Performs the division with &quot;round to zero&quot; semantics, except the following 3 cases&#x000a; * 1) if a is 0, then it returns 0&#x000a; * 2) else if b is 0, then it returns 1 if a is negative and -1 if a is positive&#x000a; * 3) else if a is the smallest negative integer, and b is -1, then it returns a&#x000a; */&#x000a;fun div [n1, n2: Int] : Int { n1 fun/div n2 }&#x000a;&#x000a;/** answer is defined to be the unique integer that satisfies &quot;a = ((a/b)*b) + remainder&quot; */&#x000a;fun rem [n1, n2: Int] : Int { n1 fun/rem n2 }&#x000a;&#x000a;/** negate */&#x000a;fun negate [n: Int] : Int { 0 fun/sub n }&#x000a;&#x000a;/** equal to */&#x000a;pred eq [n1, n2: Int] { int[n1] = int[n2] }&#x000a;&#x000a;/** greater than */&#x000a;pred gt [n1, n2: Int] { n1 &gt; n2 }&#x000a;&#x000a;/** less then */&#x000a;pred lt [n1, n2: Int] { n1 &lt; n2 }&#x000a;&#x000a;/** greater than or equal */&#x000a;pred gte [n1, n2: Int] { n1 &gt;= n2 }&#x000a;&#x000a;/** less than or equal */&#x000a;pred lte [n1, n2: Int] { n1 &lt;= n2 }&#x000a;&#x000a;/** integer is zero */&#x000a;pred zero [n: Int] { n = 0 }&#x000a;&#x000a;/** positive */&#x000a;pred pos  [n: Int] { n &gt; 0 }&#x000a;&#x000a;/** negative */&#x000a;pred neg  [n: Int] { n &lt; 0 }&#x000a;&#x000a;/** non-positive */&#x000a;pred nonpos [n: Int] { n &lt;= 0 }&#x000a;&#x000a;/** non-negative */&#x000a;pred nonneg [n: Int] { n &gt;= 0 }&#x000a;&#x000a;/** signum (aka sign or sgn) */&#x000a;fun signum [n: Int] : Int { n&lt;0 =&gt; (0 fun/sub 1) else (n&gt;0 =&gt; 1 else 0) }&#x000a;&#x000a;/**&#x000a; * returns the ith element (zero-based) from the set s&#x000a; * in the ordering of &apos;next&apos;, which is a linear ordering&#x000a; * relation like that provided by util/ordering&#x000a; */&#x000a;fun int2elem[i: Int, next: univ-&gt;univ, s: set univ] : lone s {&#x000a;  {e: s | #^next.e = int i }&#x000a;}&#x000a;&#x000a;/**&#x000a; * returns the index of the element (zero-based) in the&#x000a; * ordering of next, which is a linear ordering relation&#x000a; * like that provided by util/ordering&#x000a; */&#x000a;fun elem2int[e: univ, next: univ-&gt;univ] : lone Int {&#x000a;  Int[#^next.e]&#x000a;}&#x000a;&#x000a;/** returns the largest integer in the current bitwidth */&#x000a;fun max:one Int { fun/max }&#x000a;&#x000a;/** returns the smallest integer in the current bitwidth */&#x000a;fun min:one Int { fun/min }&#x000a;&#x000a;/** maps each integer (except max) to the integer after it */&#x000a;fun next:Int-&gt;Int { fun/next }&#x000a;&#x000a;/** maps each integer (except min) to the integer before it */&#x000a;fun prev:Int-&gt;Int { ~next }&#x000a;&#x000a;/** given a set of integers, return the largest element */&#x000a;fun max [es: set Int]: lone Int { es - es.^prev }&#x000a;&#x000a;/** given a set of integers, return the smallest element */&#x000a;fun min [es: set Int]: lone Int { es - es.^next }&#x000a;&#x000a;/** given an integer, return all integers prior to it */&#x000a;fun prevs [e: Int]: set Int { e.^prev }&#x000a;&#x000a;/** given an integer, return all integers following it */&#x000a;fun nexts [e: Int]: set Int { e.^next }&#x000a;&#x000a;/** returns the larger of the two integers */&#x000a;fun larger [e1, e2: Int]: Int { let a=int[e1], b=int[e2] | (a&lt;b =&gt; b else a) }&#x000a;&#x000a;/** returns the smaller of the two integers */&#x000a;fun smaller [e1, e2: Int]: Int { let a=int[e1], b=int[e2] | (a&lt;b =&gt; a else b) }&#x000a;"/>
+
+<source filename="\$alloy4$\models\util\boolean.als" content="module util/boolean&#x000a;&#x000a;/*&#x000a; * Creates a Bool type with two singleton subtypes: True&#x000a; * and False. Provides common boolean operations.&#x000a; *&#x000a; * author: Greg Dennis&#x000a; */&#x000a;&#x000a;abstract sig Bool {}&#x000a;one sig True, False extends Bool {}&#x000a;&#x000a;pred isTrue[b: Bool] { b in True }&#x000a;&#x000a;pred isFalse[b: Bool] { b in False }&#x000a;&#x000a;fun Not[b: Bool] : Bool {&#x000a;  Bool - b&#x000a;}&#x000a;&#x000a;fun And[b1, b2: Bool] : Bool {&#x000a;  subset_[b1 + b2, True]&#x000a;}&#x000a;&#x000a;fun Or[b1, b2: Bool] : Bool {&#x000a;  subset_[True, b1 + b2]&#x000a;}&#x000a;&#x000a;fun Xor[b1, b2: Bool] : Bool {&#x000a;  subset_[Bool, b1 + b2]&#x000a;}&#x000a;&#x000a;fun Nand[b1, b2: Bool] : Bool {&#x000a;  subset_[False, b1 + b2]&#x000a;}&#x000a;&#x000a;fun Nor[b1, b2: Bool] : Bool {&#x000a;  subset_[b1 + b2, False]&#x000a;}&#x000a;&#x000a;fun subset_[s1, s2: set Bool] : Bool {&#x000a;  (s1 in s2) =&gt; True else False&#x000a;}&#x000a;"/>
+
+</alloy>

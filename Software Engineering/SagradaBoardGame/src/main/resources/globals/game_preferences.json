@@ -1,0 +1,9 @@
+{
+  "maxPlayers":4,
+  "lobbyTimeout":3000,
+  "lobbyNotifyTime":7000,
+  "lobbyLastNotifyTime":2000,
+  "turnTime":600000,
+  "turnEndAlertTime":3000,
+  "chooseBoardTime": 300000
+}

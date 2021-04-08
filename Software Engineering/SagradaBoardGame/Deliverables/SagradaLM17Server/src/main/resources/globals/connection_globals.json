@@ -1,0 +1,7 @@
+{
+  "rmiPort":42022,
+  "socketPort":42021,
+  "rmiUrlPostfix":"sagrada17",
+  "heartbeatMillis": 3000,
+  "rmiURL":"//127.0.0.1:42022/sagrada17"
+}
