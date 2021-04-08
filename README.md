@@ -8,11 +8,11 @@ They are organized as follows:
   - Deep Learning (Python, Tensorflow, Keras)
   - Advanced Recommender Systems (AWS Amazon Polly)
   - Debiasing (LaTeX)
-- Software Engineering
-  - Sagrada Board Game (Java)
-  - Mobile Apps Documentation (LaTeX)
 - Others
   - Bootstrap Website (Bootstrap, HTML, CSS, JavaScript)
   - Image Scanner (VHDL)
-  
+- Software Engineering
+  - Sagrada Board Game (Java)
+  - Mobile Apps Documentation (LaTeX)
+
 Cheers!
