@@ -1,4 +1,4 @@
-# File System Simulator 
+# File System Simulator - 2015/2016 Academic year
 
 Project for the course Algoritmi e Principi dell'Informatica as taught in Politecnico di Milano during the academic year  2015/2016.
 
