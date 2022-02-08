@@ -1,4 +1,4 @@
-# NDTM Simulator
+# NDTM Simulator - Academic year 2016/2017
 
 Project for the course Algorithms and Informatics Principles as taught in Politecnico di Milano during the academic year 2016/2017. 
 
